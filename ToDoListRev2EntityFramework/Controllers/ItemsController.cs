@@ -19,5 +19,13 @@ namespace ToDoList.Controllers
             List<Item> model = db.Items.ToList();
             return View(model);
         }
+
+        // GET: /<controller/{id}
+        public IActionResult Details(int id)
+        {
+            Item thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
+
+            return View(thisItem);
+        }
     }
 }
