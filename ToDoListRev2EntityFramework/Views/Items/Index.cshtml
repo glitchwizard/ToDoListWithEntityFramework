@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<ToDoList.Models.Item>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>To Do list</title>
+</head>
+<body>
+    <h2>To Do List</h2>
+    <h4>@Html.DisplayNameFor(model => model.Description)</h4>
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>@Html.DisplayFor(modelitem => listItem.Description)</li>
+        }
+    </ul>
+</body>
+</html>
