@@ -9,7 +9,7 @@ using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
-    public class ItemsController1 : Controller
+    public class ItemsController : Controller
     {
         private ToDoListContext db = new ToDoListContext();
 
