@@ -27,5 +27,19 @@ namespace ToDoList.Controllers
 
             return View(thisItem);
         }
+
+        //CREATE: /<contoller>/create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Item item)
+        {
+            db.Items.Add(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
